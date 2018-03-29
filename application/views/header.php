@@ -70,11 +70,11 @@
 					<ul class="nav navbar-nav text-right">
 						<li class="<?php if($aktif == 'beranda'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>">Beranda</a></li>
 						<li class="<?php if($aktif == 'tentang'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>tentang">Tentang</a></li>
-						<li class="<?php if($aktif == 'produk'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>produk">Produk </a></li>
+						<li class="<?php if($aktif == 'room'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>room">Produk </a></li>
 						<!--						<li class="smooth-scroll"><a href="#featurs">features</a></li>-->
 						<!-- <li class="smooth-scroll"><a href="shop.html">shop</a></li> -->
-						<li class="<?php if($aktif == 'foto'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>foto">Foto </a></li>
-						<li class="<?php if($aktif == 'contact'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>contact">Kontak</a></li>
+						<li class="<?php if($aktif == 'gallery'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>galleri">Foto </a></li>
+						<li class="<?php if($aktif == 'hubungi'){ echo 'active';} ?> smooth-scroll"><a href="<?php echo base_url().'home/'?>hubungi">Kontak</a></li>
 					</ul>
 				</div>
 			</div>

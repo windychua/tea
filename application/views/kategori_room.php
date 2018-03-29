@@ -37,7 +37,7 @@
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
 								<p>Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita.</p>
-								<a class="read-btn" href="blog-details.html">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
+								<a class="read-btn" href="<?= base_url().'home/room' ?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- Ends Signle Blog Box -->
@@ -52,7 +52,7 @@
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
 								<p>Teh jahe Sebagai bahan pengobatan, biasanya jahe dikonsumsi dengan diolah menjadi sejenis minuman, sepertiyang kita kenal dengan wedang jahe atau beberapa orang menyebutnya dengan teh jahe.</p>
-								<a class="read-btn" href="blog-details.html">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
+								<a class="read-btn" href="<?= base_url().'home/gallery_room' ?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- Ends Signle Blog Box -->
@@ -67,7 +67,7 @@
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
 								<p>Berbicara tentang daun salam biasanya banyak digunakan orang sebagai bumbu penyedap masakan. Tetapi perlu untuk anda ketahui bahwa daun salam ini bisa digunakan sebagai minuman atau dijadikan teh ataupu rebusan yang banyak digunakan sebagai obat untuk mengatasi berbagai macam penyakit..</p>
-								<a class="read-btn" href="blog-details.html">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
+								<a class="read-btn" href="<?= base_url().'home/room' ?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- Ends Signle Blog Box -->
@@ -82,7 +82,7 @@
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
 								<p>Jahe atau tanaman dengan nama latin Zingiber officinale dikenal sebagai tanaman yang dapat digunakan sebagai rempah yang juga memiliki khasiat untuk kesehatan. Jahe memiliki rimpang yang berbentuk jemari dan menggembung di bagian ruasnya. Selain itu, jahe juga jahe juga sangat dikenal sebagai salah satu bahan untuk mengatasi beberapa jenis penyakit karena kandungan di dalmnya.</p>
-								<a class="read-btn" href="blog-details.html">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
+								<a class="read-btn" href="<?= base_url().'home/room' ?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<!-- Ends Signle Blog Box -->
