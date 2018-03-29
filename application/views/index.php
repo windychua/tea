@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/' ?>css/lightbox-style.css">
+	<script type="text/javascript" src="<?php echo base_url().'assets/' ?>js/lightbox.js"></script>
+</head>
 <section id="home-slider">
 	<!-- Start Slider Wraper Here -->
 	<div class="slider-waper">
@@ -246,7 +250,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 salam">
 							<div class="shop-cart-box">
 								<div class="cart-price">
-									<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s1.jpeg" alt="featurs product">
+									<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s1.jpeg" alt="featurs product" onclick="openModal();currentSlide(1)">
 									<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 								</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -259,7 +263,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 gerai">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g1.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g1.jpeg" alt="featurs product" onclick="openModal();currentSlide(2)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -272,7 +276,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 salam">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s2.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s2.jpeg" alt="featurs product" onclick="openModal();currentSlide(3)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -285,7 +289,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j1.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j1.jpeg" alt="featurs product" onclick="openModal();currentSlide(4)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -298,7 +302,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 gerai">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g2.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g2.jpeg" alt="featurs product" onclick="openModal();currentSlide(5)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -311,7 +315,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 salam">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s3.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s3.jpeg" alt="featurs product" onclick="openModal();currentSlide(6)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -324,7 +328,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j2.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j2.jpeg" alt="featurs product" onclick="openModal();currentSlide(7)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -337,7 +341,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box"> 
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j3.jpeg" alt="featurs product">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j3.jpeg" alt="featurs product" onclick="openModal();currentSlide(8)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -346,6 +350,43 @@
 							</div>
 							<!-- Start Single Featurs Box Here -->
 						</div>
+						<div id="myModal" class="modal" onclick="closeModal()">
+								<span class="close cursor" onclick="closeModal()">&times;</span>
+								<div class="modal-content">
+
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s1.jpeg" style="width:100%">
+									</div>
+
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g1.jpeg" style="width:100%">
+									</div>
+
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s2.jpeg" style="width:100%">
+									</div>
+
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j1.jpeg" style="width:100%">
+									</div>
+									
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g2.jpeg" style="width:100%">
+									</div>
+									
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s3.jpeg" style="width:100%">
+									</div>
+									
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j2.jpeg" style="width:100%">
+									</div>
+									
+									<div class="mySlides">
+										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j3.jpeg" style="width:100%">
+									</div>
+								</div>
+							</div>
 						<!-- Portfolio List Ends Here -->
 					</div>
 				</div>
