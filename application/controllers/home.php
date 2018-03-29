@@ -47,33 +47,20 @@ class Home extends CI_Controller {
 		$this->load->view('footer');	
 	}
 
-	public function produk(){
-		$data_header['title'] = 'Tea Shop';
-		$data_header['description'] = 'Tea Shop adalah salah satu shop cafe di kota malang';
-		$data_header['keyword'] = 'Tea Shop';
-		$data_header['aktif'] = 'produk';
-		$data_header['menu']   = $this->Model->menu_header()->result_array();
-		$this->load->view('header', $data_header);
-		
-		$data['tampil_slider'] = $this->Model->tampil_slider(3)->result_array();
-		$data['home'] 	   = $this->Model->tampil()->result_array();
-		
-		$data['galeri_album'] = $this->Model->album_galeri(5)->result_array();
-		$this->load->view('produk', $data);
-		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
-		$this->load->view('footer');	
-
-		$produk_meta = $this->Model->tampil(4, $id)->row();
-		$data_header['title'] = @$produk_meta->detail_title_meta;
+	public function produk($id){
+		 $produk_meta = $this->Model->tampil(4, $id)->row();
+	    $data_header['title'] = @$produk_meta->detail_title_meta;
 		$data_header['description'] = @$produk_meta->detail_deskripsi_meta;
 		$data_header['keyword'] = @$produk_meta->detail_keyword_meta;
 		$data_header['aktif'] = 'produk';
-		$data_header['menu'] = $this->Model->menu_header()->result_array();
+		$data_header['tentang']=$this->Model->tentang()->row();
+		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
+		//$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data['room'] = $this->Model->tampil(4, $id)->row();
 		//$data['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('header', $data_header);
 		$this->load->view('single', $data);
-		$this->load->view('footer');	
+		$this->load->view('footer');		
 	}
 
 	function galeri_room($id){
@@ -85,6 +72,7 @@ class Home extends CI_Controller {
 		$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data['room_nama']= $this->Model->tampil($id)->row();
 		$data['room_jenis']= $this->Model->tampil($id)->result_array();
+		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
 		$this->load->view('header', $data_header);
 		$this->load->view('room', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
@@ -110,6 +98,7 @@ class Home extends CI_Controller {
 		$data_header['keyword'] = 'Anisa Tour And Travel';
 		$data_header['aktif'] = 'room';
 		$data['produk'] 	 = $this->Model->kategori_produk()->result_array();
+		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
 		$this->load->view('header', $data_header);
 		$this->load->view('kategori_room', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();

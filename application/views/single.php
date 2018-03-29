@@ -1,4 +1,5 @@
-<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>img/blogpage/blogbanner.jpg');">
+<!-- Start Page Banner Here -->
+	<section class="section-padding bg-overlay page-banner blog-banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -7,7 +8,7 @@
 					</div>
 					<!-- Breadcrumb -->
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="<?php echo base_url().'home/'?>">Beranda</a></li>
+						<li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
 						<li class="breadcrumb-item active">Produk</li>
 					</ol>
 					<!-- Breadcrumb -->
@@ -26,48 +27,37 @@
 					<!-- Start Blog Post Content -->
 					<div class="blog-post-content">
 						<!-- Start Signle Blog Box -->
-						<?php foreach($produk as $produke) {?>
 						<div class="signle-blog-box">
-							<div class="blog-bg blog-bg-1" style="background-image:url('<?php echo base_url().'assets/'; ?>images/<?php echo $produke['produk_gambar']?>');">
-								
-							</div>
+							<div class="blog-bg blog-bg-1" style="background-image: url('assets/img/tehfirdia/s6.jpeg');"></div>
 							<div class="blog-content-box">
-								<h3><?php echo $produke['produk_utama']?></h3>
+								<h3>Teh Daun Salam</h3>
 								<div class="blog-meta">
 									<!--<span><i class="fa fa-calendar"></i> September 8, 2017</span>-->
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
-								<!-- <p>Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita.</p> -->
-								<a class="read-btn" href="<?php echo base_url('home/galeri_room/'.$produke['id_produk'])?>">Baca Selengkapnyax <i class="fa fa-long-arrow-right"></i></a>
+								<p>Teh daun salam merupakan sebuah minuman yang telah dibuat dari daun salam. Berbicara tentang daun salam biasanya banyak digunakan orang sebagai bumbu penyedap masakan. Tetapi perlu untuk anda ketahui bahwa daun salam ini bisa digunakan sebagai minuman atau dijadikan teh ataupu rebusan yang banyak digunakan sebagai obat untuk mengatasi berbagai macam penyakit. Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita. Lalu apa saja manfaat dan khasiat teh daun salam untuk kesehatan ? Berikut inilah informasinya.</p>
+								
+								<p><b>1. Mengobati diabetes</b>
+								    Diabetes merupakan sebuah penyakit yang telah diakibatkan oleh kadar gula darah yang tinggi. Daun salam ini sudah terbukti bahwa bisa digunakan untuk mengoabati diabetes tipe 2 dimana bisa membantu menurunkan kadar glukosa darah dan juga kolesterol di tubuh anda. Untuk mendapatkan hasil yang baik, anda bisa mengkonsumsi minuman ini dengan rutin. Kandungan antioksidan di dalam minuman ini akan membantu tubuh untuk memproses insulin dengan efisien.
+</p>
+								
+								<p><b>2. Meredakan rasa sakit</b>
+								    Minyak yang telah di ekstra dari daun salam ini bisa membantu anda dalam meredakan rasa sakit. Kandungan anti inflamasi di dalam minuman ini telah berguna sekali di dalam mengurangi rasa sakit yang telah diakibatkan oleh keselo, arthritis, rematik, strain dan juga nyeri. Kandungan di dalam minuman itulah yang nantinya akan membnatu mengurangi dan meringankan migrai atau sakit kepala. Kemudian minuman ini juga akan membantu meningkatkan sirkualsi darah anda.
+</p>
+
 							</div>
 						</div>
-						<?php } ?>
-						
 						<!-- Ends Signle Blog Box -->
 					</div>
 					<!-- Ends Blog Post Content -->
 
-					<!-- Start Pagination Here -->
-					<!-- <div class="pagination-area">
-						<ul class="">
-							<li>
-								<a href="#" aria-label="Previous">
-									<span aria-hidden="true">&laquo;</span>
-								</a>
-							</li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li class="active"><a href="#">3</a></li>
-							<li><a href="#">...</a></li>
-							<li><a href="#">10</a></li>
-							<li>
-								<a href="#" aria-label="Next">
-									<span aria-hidden="true">&raquo;</span>
-								</a>
-							</li>
-						</ul>
-					</div> -->
-					<!-- Ends Pagination Here -->
+					<!-- Start Related Post	Here -->
+					
+					<!-- Start Related Post	Here -->
+
+					<!-- Start Comments Here -->
+					
+					<!-- Start Comments Here -->
 				</div>
 				<!-- Ends Blog Content Here -->
 				
@@ -75,31 +65,13 @@
 				<div class="col-md-3 col-md-pull-9">
 					<div class="side-bar">
 						<!-- Start Search Box Widget -->
-						<!-- <div class="search-box sidebar-widget">
-							<form action="#">
-						        <input type="search" placeholder="Search...">
-						        <button type="submit" class=""><i class="fa fa-search"></i></button>
-							</form>
-						</div> -->
+						
 						<!-- Ends Search Box Widget -->
 
 						<!-- Start Categories Widget -->
-						<!-- <div class="categories-widget sidebar-widget">
-							<div class="sidebar-titel">
-								<h4>categories</h4>
-							</div>
-							<ul class="categories-item">
-								<li><a href="#">Green <span>25</span></a></li>
-								<li><a href="#">Herbal <span>15</span></a></li>
-								<li><a href="#">Loose <span>35</span></a></li>
-								<li><a href="#">Mate <span>20</span></a></li>
-								<li><a href="#">Organic <span>10</span></a></li>
-								<li><a href="#">Pu'Erh <span>25</span></a></li>
-								<li><a href="#">Black <span>17</span></a></li>
-								<li><a href="#">White <span>30</span></a></li>
-							</ul>
-						</div> -->
+						
 						<!-- Ends Categories Widget -->
+
 						<!-- Start Featurs Product Widget Here -->
 						<div class="recent-post-widget sidebar-widget">
 							<div class="sidebar-titel">
@@ -117,7 +89,23 @@
 									</a>
 								</li>
 								<?php } ?>
-								
+								<!-- 
+								<li>
+									<a href="#">
+										<img src="assets/img/product/2.jpg" alt="Featured Product">
+										<p>
+											Nama Produk <span>Teh Hitam</span>
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="assets/img/product/3.jpg" alt="Featured Product">
+										<p>
+											Nama Produk <span>Teh Herbal</span>
+										</p>
+									</a>
+								</li> -->
 							</ul>
 						</div>
 						<!-- Ends Featurs Product Here -->
@@ -139,7 +127,7 @@
 								<li><a href="#">Orange</a></li>
 							</ul>
 						</div> -->
-						<!-- Ends Tag List widget Here -->						
+						<!-- Ends Tag List widget Here -->
 					</div>
 				</div>
 				<!-- Ends Side Bar Here -->
@@ -152,9 +140,4 @@
 	<div class="ScrollToTop">
 		<a href="#"><i class="fa fa-angle-up"></i></a>
 	</div>
-	<div class="g-map cd-google-map" style="display: none;">
-		<div id="google-container"></div>
-		<div id="cd-zoom-in"></div>
-		<div id="cd-zoom-out"></div>
-	</div>
-	<!-- Ends Google Map Here -->
+	<!-- ScrollToTop Ends Here -->

@@ -26,6 +26,12 @@ class Model extends CI_Model {
 		return $this->db->get();
 	}	
 
+	public function sidebar($limit){
+		$this->db->limit($limit);
+		$this->db->order_by('RAND()');
+		return $this->db->get('tb_produk');
+	}
+
 	public function tampil_slider($limit){
 		return $this->db->get('tb_slider');
 	}
