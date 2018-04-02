@@ -1,10 +1,10 @@
 <!-- Start Page Banner Here -->
-	<section class="section-padding bg-overlay page-banner blog-banner">
+	<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>images/blogpage/blogbanner.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-header">
-						<h2>Produk</h2>
+						<h2>Produksi</h2>
 					</div>
 					<!-- Breadcrumb -->
 					<ol class="breadcrumb">
@@ -26,27 +26,21 @@
 				<div class="col-md-9 col-md-push-3">
 					<!-- Start Blog Post Content -->
 					<div class="blog-post-content">
+
 						<!-- Start Signle Blog Box -->
 						<div class="signle-blog-box">
-							<div class="blog-bg blog-bg-1" style="background-image: url('assets/img/tehfirdia/s6.jpeg');"></div>
+							<div class="blog-bg blog-bg-1" style="background-image: url('<?php echo base_url().'assets/images/'?><?php echo $room->detail_gambar;?>');"></div>
 							<div class="blog-content-box">
-								<h3>Teh Daun Salam</h3>
+								<h3><?php echo $room->detail_title_meta;?></h3>
 								<div class="blog-meta">
 									<!--<span><i class="fa fa-calendar"></i> September 8, 2017</span>-->
 									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
 								</div>
-								<p>Teh daun salam merupakan sebuah minuman yang telah dibuat dari daun salam. Berbicara tentang daun salam biasanya banyak digunakan orang sebagai bumbu penyedap masakan. Tetapi perlu untuk anda ketahui bahwa daun salam ini bisa digunakan sebagai minuman atau dijadikan teh ataupu rebusan yang banyak digunakan sebagai obat untuk mengatasi berbagai macam penyakit. Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita. Lalu apa saja manfaat dan khasiat teh daun salam untuk kesehatan ? Berikut inilah informasinya.</p>
+								<p><?php echo $room->detail_deskripsi_meta;?></p>
 								
-								<p><b>1. Mengobati diabetes</b>
-								    Diabetes merupakan sebuah penyakit yang telah diakibatkan oleh kadar gula darah yang tinggi. Daun salam ini sudah terbukti bahwa bisa digunakan untuk mengoabati diabetes tipe 2 dimana bisa membantu menurunkan kadar glukosa darah dan juga kolesterol di tubuh anda. Untuk mendapatkan hasil yang baik, anda bisa mengkonsumsi minuman ini dengan rutin. Kandungan antioksidan di dalam minuman ini akan membantu tubuh untuk memproses insulin dengan efisien.
-</p>
-								
-								<p><b>2. Meredakan rasa sakit</b>
-								    Minyak yang telah di ekstra dari daun salam ini bisa membantu anda dalam meredakan rasa sakit. Kandungan anti inflamasi di dalam minuman ini telah berguna sekali di dalam mengurangi rasa sakit yang telah diakibatkan oleh keselo, arthritis, rematik, strain dan juga nyeri. Kandungan di dalam minuman itulah yang nantinya akan membnatu mengurangi dan meringankan migrai atau sakit kepala. Kemudian minuman ini juga akan membantu meningkatkan sirkualsi darah anda.
-</p>
-
 							</div>
 						</div>
+
 						<!-- Ends Signle Blog Box -->
 					</div>
 					<!-- Ends Blog Post Content -->
@@ -82,7 +76,7 @@
 								<?php foreach ($terbaru as $t) {?>
 								<li>
 									<a href="<?php echo base_url('home/produk/'.$t['id_detail']) ?>">
-										<img src="<?= base_url().'assets/img/'.$t['detail_gambar'] ?>" alt="Featured Product">
+										<img src="<?= base_url().'assets/images/'.$t['detail_gambar'] ?>" alt="Featured Product">
 										<p>
 											Nama Produk <span><?php echo $t['detail_judul'] ?></span>
 										</p>

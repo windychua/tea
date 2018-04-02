@@ -5,15 +5,15 @@
 <section id="home-slider">
 	<!-- Start Slider Wraper Here -->
 	<div class="slider-waper">
-		<!-- Slider Single Item -->
-		<div class="single-slide-item slider-bg-1 bg-overlay" style="background-image:url('<?php echo base_url().'assets/'?>img/slider/slider1.jpg');">
+		<?php $a=0; foreach ($tampil_slider as $ts) { $a++;?>
+		<div class="single-slide-item slider-bg-1 bg-overlay" style="background-image:url('<?php echo base_url().'assets/images/'.$ts['slider_gambar'] ?>');">
 			<div class="container">
 				<div class="teashop-table">
 					<div class="teashop-table-cell">
 						<div class="row">
 							<div class="col-md-6">
-								<h1>Kami Mempunyai <span>Sesuatu</span> Untuk Anda</h1>
-								<p>khusus bahkan untuk selera Anda yang halus</p>
+								<h1><?php echo $ts['slider_judul'];?></h1>
+								<p><?php echo $ts['slider_deskripsi'];?></p>
 								<!-- <a href="#" class="teashop-btn">shop now</a> -->
 							</div>
 						</div>
@@ -21,10 +21,11 @@
 				</div>
 			</div>
 		</div>
+		<?php } ?>
 		<!-- Slider Single Item -->
 
 		<!-- Slider Single Item -->
-		<div class="single-slide-item slider-bg-2 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>img/slider/slider2.jpg');">
+<!-- 		<div class="single-slide-item slider-bg-2 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>images/slider/slider2.jpg');">
 			<div class="container">
 				<div class="teashop-table">
 					<div class="teashop-table-cell">
@@ -33,16 +34,16 @@
 								<h1>Kami Mempunyai <span>Sesuatu</span> Untuk Anda</h1>
 								<p>khusus bahkan untuk selera Anda yang halus</p>
 								<!-- <a href="#" class="teashop-btn">shop now</a> -->
-							</div>
+							<!-- </div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div> -->
+		<!-- </div>  -->
 		<!-- Slider Single Item -->
 
 		<!-- Slider Single Item -->
-		<div class="single-slide-item slider-bg-3 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>img/slider/slider3.jpg');">
+		<!-- <div class="single-slide-item slider-bg-3 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>images/slider/slider3.jpg');">
 			<div class="container">
 				<div class="teashop-table">
 					<div class="teashop-table-cell">
@@ -51,16 +52,16 @@
 								<h1>Kami Mempunyai <span>Sesuatu</span> Untuk Anda</h1>
 								<p>khusus bahkan untuk selera Anda yang halus</p>
 								<!-- <a href="#" class="teashop-btn">shop now</a> -->
-							</div>
+							<!-- </div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --> 
 		<!-- Slider Single Item -->
 
 		<!-- Slider Single Item -->
-		<div class="single-slide-item slider-bg-4 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>img/slider/slider1.jpg');">
+		<!-- <div class="single-slide-item slider-bg-4 bg-overlay" style="background-image:url('<?php echo base_url().'/assets/'?>images/slider/slider1.jpg');">
 			<div class="container">
 				<div class="teashop-table">
 					<div class="teashop-table-cell">
@@ -68,13 +69,13 @@
 							<div class="col-md-6">
 								<h1>Kami Mempunyai <span>Sesuatu</span> Untuk Anda</h1>
 								<p>khusus bahkan untuk selera Anda yang halus</p>
-								<!-- <a href="#" class="teashop-btn">shop now</a> -->
+								<!-- <a href="#" class="teashop-btn">shop now</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --> 
 		<!-- Slider Single Item -->
 	</div>
 	<!-- Ends Slider Wraper Here -->
@@ -112,7 +113,7 @@
 						<div class="product-photo">
 							<div class="teashop-table">
 								<div class="teashop-table-cell">
-									<img src="<?php echo base_url().'assets/' ?>img/s1.png" alt="Product Photo">
+									<img src="<?php echo base_url().'assets/' ?>images/s1.png" alt="Product Photo">
 								</div>
 							</div>
 						</div>
@@ -129,7 +130,7 @@
 						<div class="product-photo">
 							<div class="teashop-table">
 								<div class="teashop-table-cell">
-									<img src="<?php echo base_url().'assets/' ?>img/j1.png" alt="Product Photo">
+									<img src="<?php echo base_url().'assets/' ?>images/j1.png" alt="Product Photo">
 								</div>
 							</div>
 						</div>
@@ -146,7 +147,7 @@
 						<div class="product-photo">
 							<div class="teashop-table">
 								<div class="teashop-table-cell">
-									<img src="<?php echo base_url().'assets/' ?>img/product/3.jpg" alt="Product Photo">
+									<img src="<?php echo base_url().'assets/' ?>images/product/3.jpg" alt="Product Photo">
 								</div>
 							</div>
 						</div>
@@ -163,7 +164,7 @@
 						<div class="product-photo">
 							<div class="teashop-table">
 								<div class="teashop-table-cell">
-									<img src="<?php echo base_url().'assets/' ?>img/product/4.jpg" alt="Product Photo">
+									<img src="<?php echo base_url().'assets/' ?>images/product/4.jpg" alt="Product Photo">
 								</div>
 							</div>
 						</div>
@@ -250,7 +251,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-12 salam">
 							<div class="shop-cart-box">
 								<div class="cart-price">
-									<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s1.jpeg" alt="featurs product" onclick="openModal();currentSlide(1)">
+									<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s1.jpeg" alt="featurs product" onclick="openModal();currentSlide(1)">
 									<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 								</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -263,7 +264,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 gerai">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g1.jpeg" alt="featurs product" onclick="openModal();currentSlide(2)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/g1.jpeg" alt="featurs product" onclick="openModal();currentSlide(2)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -276,7 +277,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 salam">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s2.jpeg" alt="featurs product" onclick="openModal();currentSlide(3)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s2.jpeg" alt="featurs product" onclick="openModal();currentSlide(3)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -289,7 +290,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j1.jpeg" alt="featurs product" onclick="openModal();currentSlide(4)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j1.jpeg" alt="featurs product" onclick="openModal();currentSlide(4)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -302,7 +303,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 gerai">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g2.jpeg" alt="featurs product" onclick="openModal();currentSlide(5)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/g2.jpeg" alt="featurs product" onclick="openModal();currentSlide(5)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -315,7 +316,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 salam">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s3.jpeg" alt="featurs product" onclick="openModal();currentSlide(6)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s3.jpeg" alt="featurs product" onclick="openModal();currentSlide(6)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -328,7 +329,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box">
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j2.jpeg" alt="featurs product" onclick="openModal();currentSlide(7)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j2.jpeg" alt="featurs product" onclick="openModal();currentSlide(7)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -341,7 +342,7 @@
 							<div class="col-md-3 col-sm-6 col-xs-12 jahe">
 								<div class="shop-cart-box"> 
 									<div class="cart-price">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j3.jpeg" alt="featurs product" onclick="openModal();currentSlide(8)">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j3.jpeg" alt="featurs product" onclick="openModal();currentSlide(8)">
 										<!-- <a class="teashop-btn" href="#">$12.20</a> -->
 									</div>
 								<!-- <p>There are many variations of passages of Lorem Ipsum </p>
@@ -355,35 +356,35 @@
 								<div class="modal-content">
 
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s1.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s1.jpeg" style="width:100%">
 									</div>
 
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g1.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/g1.jpeg" style="width:100%">
 									</div>
 
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s2.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s2.jpeg" style="width:100%">
 									</div>
 
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j1.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j1.jpeg" style="width:100%">
 									</div>
 									
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/g2.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/g2.jpeg" style="width:100%">
 									</div>
 									
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/s3.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/s3.jpeg" style="width:100%">
 									</div>
 									
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j2.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j2.jpeg" style="width:100%">
 									</div>
 									
 									<div class="mySlides">
-										<img src="<?php echo base_url().'assets/' ?>img/tehfirdia/j3.jpeg" style="width:100%">
+										<img src="<?php echo base_url().'assets/' ?>images/tehfirdia/j3.jpeg" style="width:100%">
 									</div>
 								</div>
 							</div>
@@ -438,7 +439,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="health-bg">
-						<img src="assets/img/helth-tea.jpg" alt="healthy photo">
+						<img src="assets/images/helth-tea.jpg" alt="healthy photo">
 					</div>
 				</div>
 			</div>
@@ -542,7 +543,7 @@
 						 Testimonial Single Item 
 						<div class="testimonial-single-item">
 							<div class="clint">
-								<img src="assets/img/testimonial/1.jpg" alt="clint">
+								<img src="assets/images/testimonial/1.jpg" alt="clint">
 								<div class="clint-name">
 									<h4>Johny john <span>Usa Client</span></h4>
 									<div class="clint-ratting">
@@ -565,7 +566,7 @@
 <!--
 						<div class="testimonial-single-item">
 							<div class="clint">
-								<img src="assets/img/testimonial/2.jpg" alt="clint">
+								<img src="assets/images/testimonial/2.jpg" alt="clint">
 								<div class="clint-name">
 									<h4>Johny john <span>Usa Client</span></h4>
 									<div class="clint-ratting">
@@ -588,7 +589,7 @@
 <!--
 						<div class="testimonial-single-item">
 							<div class="clint">
-								<img src="assets/img/testimonial/3.jpg" alt="clint">
+								<img src="assets/images/testimonial/3.jpg" alt="clint">
 								<div class="clint-name">
 									<h4>Johny john <span>Usa Client</span></h4>
 									<div class="clint-ratting">
@@ -611,7 +612,7 @@
 <!--
 						<div class="testimonial-single-item">
 							<div class="clint">
-								<img src="assets/img/testimonial/4.jpg" alt="clint">
+								<img src="assets/images/testimonial/4.jpg" alt="clint">
 								<div class="clint-name">
 									<h4>Johny john <span>Usa Client</span></h4>
 									<div class="clint-ratting">
@@ -634,7 +635,7 @@
 				</div>
 				<div class="col-sm-6">
 					<div class="testimonial-photo">
-						<img src="assets/img/testimonial/testimonial-bg.jpg" alt="testimonial-bg">
+						<img src="assets/images/testimonial/testimonial-bg.jpg" alt="testimonial-bg">
 					</div>
 				</div>
 			</div>

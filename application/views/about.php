@@ -10,7 +10,7 @@
 	
 
 	<!-- Start Page Banner Here -->
-	<section class="section-padding bg-overlay page-banner about-banner" style="background-image:url('<?php echo base_url().'/assets/'?>img/aboutpage/banner.jpg');">
+	<section class="section-padding bg-overlay page-banner about-banner" style="background-image:url('<?php echo base_url().'/assets/images/'?>aboutpage/banner.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -36,14 +36,13 @@
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="section-header text-center">
 						<h2>Tentang Kami</h2>
-						<p>Teh Herbal adalah sebutan racikan bunga, daun, biji, akar, atau buah kering untuk membuat minuman yang juga disebut teh herbal. Walaupun disebut “teh”, racikan atau minuman ini tidak tentu harus mengandung daun dari tumbuhan teh. Seperti herbal Teh Satoimo, berasal dari buah talas (umbi) Satoimo yang dikeringkan dan dibikin minuman layaknya seperti teh, tentunya dengan campuran tamkomposisi tumbuhan herbal lainnya seperti dicampur dengan daun teh hijau atau dicampur dengan daun secang atau dicampuran dengan herbal-herbal lainnya untuk menambah khasiat dan manfaat minuman teh herbal.</p>
-						<p>Maka dari itu, Kami dari CV FIRDA CIPTA KARYA menjual produk-produk minuman herbal dan dalah satunya yaitu teh herbal. Minuman ini bermanfaat bagi kesehatan dan kecantikan anda.</p>
+						<p><?php echo $tentang->about_deskripsi;?></p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12" align="center">
-				    <img src="<?php echo base_url().'assets/'?>img/logo.png">
+				    <img src="<?php echo base_url().'assets/images/'?><?php echo $tentang->about_logo;?>">
 					<!--<div class="about-us-video">-->
 					<!--	<div class="video-area bg-overlay" style="background-image: url('assets/img/logo.png');">-->
 					<!--	</div>-->

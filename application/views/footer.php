@@ -1,4 +1,4 @@
-<footer id="footer" style="background-image:url('<?php echo base_url().'/assets/'?>img/footer-bg.jpg');">
+<footer id="footer" style="background-image:url('<?php echo base_url().'/assets/'?>images/footer-bg.jpg');">
 	<div class="footer-bottom">
 		<div class="container">
 			<div class="row">

@@ -13,7 +13,7 @@
 	<title>Tea Shop - Green Leaf Ecommerce HTML5 Tamplate</title>
 	
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url().'assets/img/' ?>favicon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url().'assets/images/' ?>favicon.png" />
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> 
@@ -64,7 +64,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1 class="brand-logo " style ="width:30%"><a class="" href="<?php echo base_url().'home/'?>"><img src="<?php echo base_url().'assets/' ?>img/logo.png" alt="teashop"></a></h1>
+					<h1 class="brand-logo " style ="width:30%"><a class="" href="<?php echo base_url().'home/'?>"><img src="<?php echo base_url().'assets/' ?>images/logo.png" alt="teashop"></a></h1>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav text-right">

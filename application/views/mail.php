@@ -12,8 +12,7 @@
 					<ul class="contact-info" style="text-align: left;">
 						<li>
 							<i class="fa fa-map-marker"></i>
-							Keputran Pasar Kecil 2 No 3, <br>
-							Surabaya - 60271
+							<?php echo $hubungi->kontak_deskripsi?>
 						</li>
 						<li>
 							<i class="fa fa-phone"></i>

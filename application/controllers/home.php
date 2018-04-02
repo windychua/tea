@@ -31,35 +31,37 @@ class Home extends CI_Controller {
 	}
 	
 	public function tentang(){
-		$data_header['title'] = 'Tea Shop';
-		$data_header['description'] = 'Tea Shop adalah salah satu shop cafe di kota malang';
-		$data_header['keyword'] = 'Tea Shop';
+		$tentang_meta = $this->Model->tentang()->row();
+		$data_header['title'] = @$tentang_meta->about_title_meta;
+		$data_header['description'] = @$tentang_meta->about_deskripsi_meta;
+		$data_header['keyword'] = @$tentang_meta->about_keyword_meta;
 		$data_header['aktif'] = 'tentang';
-		$data_header['menu']   = $this->Model->menu_header()->result_array();
+		$data_header['tentang']=$this->Model->tentang()->row();
+		$data['tampil_slider'] = $this->Model->tampil_slider(4)->result_array();
+		$data['tentang'] = $this->Model->tentang()->row();
+		//$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$this->load->view('header', $data_header);
-		
-		$data['tampil_slider'] = $this->Model->tampil_slider(3)->result_array();
-		$data['home'] 	   = $this->Model->tampil()->result_array();
-		
-		$data['galeri_album'] = $this->Model->album_galeri(5)->result_array();
+		// echo var_dump($data);
 		$this->load->view('about', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
-		$this->load->view('footer');	
+		$this->load->view('footer');
 	}
 
 	public function produk($id){
-		 $produk_meta = $this->Model->tampil(4, $id)->row();
-	    $data_header['title'] = @$produk_meta->detail_title_meta;
+		$produk_meta = $this->Model->tampil(4, $id)->row();
+		$data_header['title'] = @$produk_meta->detail_title_meta;
 		$data_header['description'] = @$produk_meta->detail_deskripsi_meta;
 		$data_header['keyword'] = @$produk_meta->detail_keyword_meta;
-		$data_header['aktif'] = 'produk';
+		$data_header['aktif'] = 'room';
 		$data_header['tentang']=$this->Model->tentang()->row();
 		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
 		//$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data['room'] = $this->Model->tampil(4, $id)->row();
-		//$data['terbaru'] = $this->Model->terbaru(5)->result_array();
+		// $data['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('header', $data_header);
+		// echo var_dump($data);
 		$this->load->view('single', $data);
+
 		$this->load->view('footer');		
 	}
 
@@ -68,15 +70,26 @@ class Home extends CI_Controller {
 		$data_header['title'] = @$galeri_meta->detail_title_meta;
 		$data_header['description'] = @$galeri_meta->detail_deskripsi_meta;
 		$data_header['keyword'] = @$galeri_meta->detail_keyword_meta;
-		$data_header['aktif'] = 'paket';
+		$data_header['aktif'] = 'room';
 		$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data['room_nama']= $this->Model->tampil($id)->row();
 		$data['room_jenis']= $this->Model->tampil($id)->result_array();
 		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
-		$this->load->view('header', $data_header);
-		$this->load->view('room', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
+
+		$this->load->view('header', $data_header);
+		// echo json_encode($data);
+		$this->load->view('room', $data);
 		$this->load->view('footer');	
+	}
+
+	function tampil_gallery(){
+		$data_header = $this->getHeader('galleri');
+		$data['list_album'] = $this->Model->album(0)->result();
+		$data['list_foto'] = $this->Model->foto(0)->result();
+		$this->load->view('header',$data_header);
+		$this->load->view('gallery_full',$data);
+		$this->load->view('footer');
 	}
 	
 	function galleri(){
@@ -86,20 +99,25 @@ class Home extends CI_Controller {
 		$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data_header['aktif'] = 'gallery';
 		$data['galeri_album'] = $this->Model->album_galeri()->result_array();
+		
 		$this->load->view('header', $data_header);
+		echo var_dump($data);
 		$this->load->view('gallery', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('footer');	
 	}
 	
 	function room(){
-		$data_header['title'] = 'Anisa Tour And Travel';
-		$data_header['description'] = 'Anisa Tour And Travel adalah salah satu travel di kota malang';
-		$data_header['keyword'] = 'Anisa Tour And Travel';
+		$data_header['title'] = 'Tea Shop';
+		$data_header['description'] = 'Tea Shop adalah salah satu shop cafe di kota malang';
+		$data_header['keyword'] = 'Tea Shop';
 		$data_header['aktif'] = 'room';
+		$data_header['tentang']=$this->Model->tentang()->row();
 		$data['produk'] 	 = $this->Model->kategori_produk()->result_array();
 		$data['terbaru'] = $this->Model->sidebar(4)->result_array();
 		$this->load->view('header', $data_header);
+		// echo var_dump($data);
+
 		$this->load->view('kategori_room', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('footer');
@@ -111,10 +129,12 @@ class Home extends CI_Controller {
 		$data_header['description'] = @$galeri_meta->album_deskripsi_meta;
 		$data_header['keyword'] = @$galeri_meta->album_keyword_meta;
 		$data_header['aktif'] = 'galeri';
+		$data_header['tentang']=$this->Model->tentang()->row();
 		$data_header['menu'] = $this->Model->menu_header()->result_array();
 		$data['galeri_album'] = $this->Model->album_galeri(1,$id)->result_array();
 		$data['galeri_album_room'] = $this->Model->album_galeri(2,$id)->row();
-		$this->load->view('headerfoto', $data_header);
+		$this->load->view('header', $data_header);
+		echo var_dump($data);
 		$this->load->view('gallery_album', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('footer');	
@@ -126,12 +146,8 @@ class Home extends CI_Controller {
 		$data_header['keyword'] = 'Tea Shop';
 		$data_header['aktif'] = 'hubungi';
 		$data_header['menu']   = $this->Model->menu_header()->result_array();
+		$data['hubungi'] = $this->Model->hubungi()->row();
 		$this->load->view('header', $data_header);
-		
-		$data['tampil_slider'] = $this->Model->tampil_slider(3)->result_array();
-		$data['home'] 	   = $this->Model->tampil()->result_array();
-		
-		$data['galeri_album'] = $this->Model->album_galeri(5)->result_array();
 		$this->load->view('mail', $data);
 		//$data_footer['terbaru'] = $this->Model->terbaru(5)->result_array();
 		$this->load->view('footer');

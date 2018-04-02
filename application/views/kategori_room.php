@@ -1,4 +1,4 @@
-<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>img/blogpage/blogbanner.jpg');">
+<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>images/blogpage/blogbanner.jpg');">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -34,11 +34,10 @@
 							<div class="blog-content-box">
 								<h3><?php echo $produke['produk_utama']?></h3>
 								<div class="blog-meta">
-									<!--<span><i class="fa fa-calendar"></i> September 8, 2017</span>-->
-									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
+									<h3><?php echo $produke['produk_deskripsi_meta']; ?></h3>
 								</div>
 								<!-- <p>Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita.</p> -->
-								<a class="read-btn" href="<?php echo base_url('home/galeri_room/'.$produke['id_produk'])?>">Baca Selengkapnyax <i class="fa fa-long-arrow-right"></i></a>
+								<a class="read-btn" href="<?php echo base_url('home/galeri_room/'.$produke['id_produk'])?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 						<?php } ?>
@@ -110,7 +109,7 @@
 								<?php foreach ($terbaru as $t) {?>
 								<li>
 									<a href="<?php echo base_url('home/produk/'.$t['id_detail']) ?>">
-										<img src="<?= base_url().'assets/img/'.$t['detail_gambar'] ?>" alt="Featured Product">
+										<img src="<?= base_url().'assets/images/'.$t['detail_gambar'] ?>" alt="Featured Product">
 										<p>
 											Nama Produk <span><?php echo $t['detail_judul'] ?></span>
 										</p>

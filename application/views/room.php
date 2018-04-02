@@ -1,53 +1,55 @@
-<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>img/blogpage/blogbanner.jpg');">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header">
-						<h2>Produk</h2>
-					</div>
-					<!-- Breadcrumb -->
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="<?php echo base_url().'home/'?>">Beranda</a></li>
-						<li class="breadcrumb-item active">Produk</li>
-					</ol>
-					<!-- Breadcrumb -->
+<section class="section-padding bg-overlay page-banner blog-banner" style="background-image:url('<?php echo base_url().'/assets/'?>images/blogpage/blogbanner.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-header">
+					<h2>Produk</h2>
 				</div>
+				<!-- Breadcrumb -->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="<?php echo base_url().'home/'?>">Beranda</a></li>
+					<li class="breadcrumb-item active">Produk</li>
+				</ol>
+				<!-- Breadcrumb -->
 			</div>
 		</div>
-	</section>
-	<!-- Ends Page Banner Here -->
+	</div>
+</section>
+<!-- Ends Page Banner Here -->
 
-	<!-- Start Blog Content Here -->
-	<section class="section-padding" id="blog-page-content">
-		<div class="container">
-			<div class="row">
-				<!-- Start Blog Content Here -->
-				<div class="col-md-9 col-md-push-3">
-					<!-- Start Blog Post Content -->
-					<div class="blog-post-content">
-						<!-- Start Signle Blog Box -->
-						<?php foreach($room_jenis as $produke) {?>
-						<div class="signle-blog-box">
-							<div class="blog-bg blog-bg-1" style="background-image:url('<?php echo base_url().'assets/'; ?>images/<?php echo $produke['produk_gambar']?>');">
-								
-							</div>
-							<div class="blog-content-box">
-								<h3><?php echo $produke['produk_utama']?></h3>
-								<div class="blog-meta">
-									<!--<span><i class="fa fa-calendar"></i> September 8, 2017</span>-->
-									<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
-								</div>
-								<!-- <p>Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita.</p> -->
-								<a class="read-btn" href="<?php echo base_url('home/produk/'.$produke['id_produk'])?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
-							</div>
+<!-- Start Blog Content Here -->
+<section class="section-padding" id="blog-page-content">
+	<div class="container">
+		<div class="row">
+			<!-- Start Blog Content Here -->
+			<div class="col-md-9 col-md-push-3">
+				<!-- Start Blog Post Content -->
+				<div class="blog-post-content">
+					<!-- Start Signle Blog Box -->
+					<?php foreach($room_jenis as $produke) {?>
+					<div class="signle-blog-box">
+						<div class="blog-bg blog-bg-1" style="background-image:url('<?php echo base_url().'assets/'; ?>images/<?php echo $produke['detail_gambar']?>');">
+							
 						</div>
-						<?php } ?>
-						
-						<!-- Ends Signle Blog Box -->
-					</div>
-					<!-- Ends Blog Post Content -->
+						<div class="blog-content-box">
+							<h3><?php echo $produke['detail_keyword_meta']?></h3>
+							<div class="blog-meta">
+									<p><?php echo $produke['detail_deskripsi_meta']; ?></p>
 
-					<!-- Start Pagination Here -->
+								<!--<span><i class="fa fa-calendar"></i> September 8, 2017</span>-->
+								<!--<span><a href="#"><i class="fa fa-user"></i> John Smith</a></span>-->
+							</div>
+							<!-- <p>Berbicara tentang manfaat dari minuman teh daun salam ini tidak lepas karena kandungan yang ada di dalamnya. Untuk kandungan yang telah ada pada minuman ini sangatlah baik sekali untuk tubuh. Tentu, dengan kandungan tersebut telah dipercaya memiliki banyak manfaat bagi tubuh kita.</p> -->
+							<a class="read-btn" href="<?php echo base_url('home/produk/'.$produke['id_detail'])?>">Baca Selengkapnya <i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+					<?php } ?>
+					
+					<!-- Ends Signle Blog Box -->
+				</div>
+				<!-- Ends Blog Post Content -->
+
+				<!-- Start Pagination Here -->
 					<!-- <div class="pagination-area">
 						<ul class="">
 							<li>
@@ -110,7 +112,7 @@
 								<?php foreach ($terbaru as $t) {?>
 								<li>
 									<a href="<?php echo base_url('home/produk/'.$t['id_detail']) ?>">
-										<img src="<?= base_url().'assets/img/'.$t['detail_gambar'] ?>" alt="Featured Product">
+										<img src="<?= base_url().'assets/images/'.$t['detail_gambar'] ?>" alt="Featured Product">
 										<p>
 											Nama Produk <span><?php echo $t['detail_judul'] ?></span>
 										</p>
